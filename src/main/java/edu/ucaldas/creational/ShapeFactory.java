@@ -9,10 +9,31 @@ package edu.ucaldas.creational;
 public class ShapeFactory {
     public Shape createShape(String type) {
         // TODO: completa la lógica de creación
-        return null;
+        if (type == null) return null;
+
+        if (type.equalsIgnoreCase("Circle")) {
+            return new Circle();
+        } else if (type.equalsIgnoreCase("Square")) {
+            return new Square();
+        } else {
+            return null;
+        }
+    }
+
+    // TODO: Implementa las clases Circle y Square
+    // Circle → "Dibujando un círculo."
+    // Square → "Dibujando un cuadrado."
+    private static class Circle implements Shape {
+        @Override
+        public String draw() {
+            return "Dibujando un circulo.";
+        }
+    }
+
+    private static class Square implements Shape {
+        @Override
+        public String draw() {
+            return "Dibujando un cuadrado.";
+        }
     }
 }
-
-// TODO: Implementa las clases Circle y Square
-// Circle → "Dibujando un círculo."
-// Square → "Dibujando un cuadrado."
