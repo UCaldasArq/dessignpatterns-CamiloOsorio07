@@ -8,7 +8,6 @@ package edu.ucaldas.creational;
 
 public class ShapeFactory {
     public Shape createShape(String type) {
-        // TODO: completa la lógica de creación
         if (type == null) return null;
 
         if (type.equalsIgnoreCase("Circle")) {
@@ -26,7 +25,7 @@ public class ShapeFactory {
     private static class Circle implements Shape {
         @Override
         public String draw() {
-            return "Dibujando un circulo.";
+            return "Dibujando un círculo.";
         }
     }
 
