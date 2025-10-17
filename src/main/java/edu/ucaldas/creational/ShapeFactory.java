@@ -10,9 +10,9 @@ public class ShapeFactory {
     public Shape createShape(String type) {
         if (type == null) return null;
 
-        if (type.equalsIgnoreCase("Circle")) {
+        if (type.equals("Circle")) {
             return new Circle();
-        } else if (type.equalsIgnoreCase("Square")) {
+        } else if (type.equals("Square")) {
             return new Square();
         } else {
             return null;

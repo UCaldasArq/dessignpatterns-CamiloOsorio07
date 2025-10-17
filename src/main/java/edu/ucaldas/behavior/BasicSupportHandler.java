@@ -1,15 +1,15 @@
 package edu.ucaldas.behavior;
 
-public class BasicSupportHandler extends Handler {
+public class BasicSupportHandler extends Handler{
 
     @Override
     public String handleRequest(String request) {
-        if (request != null && request.equalsIgnoreCase("básica")) {
+        if(request.contains("básica")){
+
             return "Atendido por Soporte Básico";
-        } else if (next != null) {
-            return next.handleRequest(request);
-        } else {
-            return "No se puede atender la solicitud.";
         }
+        return this.next.handleRequest(request);
     }
+
+
 }
